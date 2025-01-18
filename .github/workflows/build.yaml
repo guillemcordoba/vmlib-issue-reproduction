@@ -15,6 +15,9 @@ jobs:
           toolchain: 1.81
           target: aarch64-apple-ios
 
+      - name: Install deps
+        run: |
+          brew install ninja gcc
       - name: build
         run: |
           cargo build --target aarch64-apple-ios
